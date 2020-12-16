@@ -35,4 +35,44 @@
   }
   
   
-  }
+  };
+  
+  
+ int main() {
+
+
+	string gender;
+
+	cout << "Finding Love can be tough, life is nothing but work, eat, sleep, repeat." << endl;
+	cout << "It's time to get off social media and find love the old fashion way" << endl;
+	cout<< "in a REALITY TV SHOW"<<endl;
+	cout << " " << endl;
+	cout << " " << endl;
+	cout << "WELCOME TO LOVE ISLAND !!! <3" << endl;;
+	cout << " " << endl;
+	cout << " " << endl;
+	cout << "Starting with the nitty gritty" << endl;
+	cout<<"babes are ya a bird or a mate? " << endl;
+	cin >> gender;
+
+	string mate = "mate";
+	string bird = "bird";
+
+	if (mate == gender) {
+
+	}
+	else if (bird == gender) {
+
+	}
+	else {
+		cout << "Uh Oh babes I just don't get it, which one is ya?" << endl;
+	}
+}
+  
+  
+  
+  
+  
+  
+  
+  
