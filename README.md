@@ -55,8 +55,7 @@
 	cout<<"babes are ya a bird or a mate? " << endl;
 	cin >> gender;
 	
-	cout << " " << endl;
-	cout << "Well you're proper fit luv I'll tell ya that." << endl;
+	
 
 	string mate = "mate";
 	string bird = "bird";
