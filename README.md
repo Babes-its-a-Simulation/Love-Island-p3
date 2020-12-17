@@ -46,23 +46,39 @@ public:
 	}
 
 	void Chat() {
-
+		cout << "Alex: It's such a nice night out, I wonder what connections everyone is making." << endl;
+		cout << "So babes, is there anyone that your feeling a connection with?" << endl;
+		cout << "We have Alex, Adrian, Taylor, Morgan, Jamie, and Blake in the game." << endl;
+		cin >> connection >> endl;
+		
+		if (connection == Alex || Adrian || Taylor || Morgan || Jamie || Blake) {
+			cout << "Ooooh " << connection << " is a great choice babes. They've got some good banter haven't they? Why don't you pull them for a chat?" << endl;
+			cout << "Enter yes if you want to pull " << connection << " for a chat and no if you want to think about it more" << endl;
+			cin >> answer >> endl;
+			
+			if (answer == yes) {
+				cout << "Sparks are absolutely flyin!" << endl;
+			else if (answer == no) {
+				cout << "No harm in that!" endl;
+		
+		else {
+			cout << "Babes, who is that? Are you still crushing on someone from home?" endl;
 	}
 
 	void sexyPJS() {
-		cout << "*Aridan walks into the changing room*" << endl;
+		cout << "*Adrian walks into the changing room*" << endl;
 		cout << "Adrian wants to know whether or not to put on some sexy PJs for alex tonight" << endl;
 		cout << "Taylor says there's never a time not to wear some sexy PJs" << endl;
-		cout << "Do you think Aridan should wear some sexy PJs ?" << endl;
+		cout << "Do you think Adrian should wear some sexy PJs ?" << endl;
 		cout << "Please enter yes or no" << endl;
 		cin >> maybeSexyPJs;
 
 		if (maybeSexyPJs == yes) {
-			cout << "Aridan: OOH HOO babes I knew you liked to have some fun. Imma go all out for alex" << endl;
+			cout << "Adrian: OOH HOO babes I knew you liked to have some fun. Imma go all out for alex" << endl;
 			int sexy = 1;
 		}
 		else if(maybeSexyPJs == no){
-			cout << "Aridan: hmm maybe you're right. I'll keep it a surprise for later." << endl; 
+			cout << "Adrian: hmm maybe you're right. I'll keep it a surprise for later." << endl; 
 			int sexy = 2;
 		}
 		else {
@@ -74,7 +90,8 @@ public:
 	}
 
 	void dumbMoment() {
-
+		cout << "Godd morning islander! Why don't you go chat with the other islanders around the pool?" << endl;
+		cout << "*You walk up to the other islanders deep into a very intriguin conversation." << endl;
 	}
 
 	void recoupling() {
@@ -113,17 +130,17 @@ int main() {
 	cout << " " << endl;
 	cout << " " << endl;
 	cout << "Starting with the nitty gritty" << endl;
-	cout<<"babes are ya a bird or a mate? " << endl;
+	cout<<"Babes, are ya a bird or a lad? " << endl;
 	cin >> gender;
 
 	
 
-	string mate = "mate";
+	string lad = "lad";
 	string bird = "bird";
 	string name;
 	string maType;
 
-	if (mate == gender) {
+	if (lad == gender) {
 		player.intro();
 		cout << "Alight babes now then what's ya type?" <<endl;
 		cin >> maType;
