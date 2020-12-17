@@ -46,9 +46,10 @@ public:
 	}
 
 	void Chat() {
+		cout << "*You walk up to the other islanders chatting at the fire pit." << endl;
 		cout << "Alex: It's such a nice night out, I wonder what connections everyone is making." << endl;
 		cout << "So babes, is there anyone that your feeling a connection with?" << endl;
-		cout << "We have Alex, Adrian, Taylor, Morgan, Jamie, and Blake in the game." << endl;
+		cout << "Who do you want to pull for a chat? There's Alex, Adrian, Taylor, Morgan, Jamie, and Blake here." << endl;
 		cin >> connection >> endl;
 		
 		if (connection == Alex || Adrian || Taylor || Morgan || Jamie || Blake) {
