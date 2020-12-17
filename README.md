@@ -46,24 +46,30 @@ public:
 	}
 
 	void Chat() {
-		cout << "*You walk up to the other islanders chatting at the fire pit." << endl;
 		cout << "Alex: It's such a nice night out, I wonder what connections everyone is making." << endl;
 		cout << "So babes, is there anyone that your feeling a connection with?" << endl;
-		cout << "Who do you want to pull for a chat? There's Alex, Adrian, Taylor, Morgan, Jamie, and Blake here." << endl;
-		cin >> connection >> endl;
-		
-		if (connection == Alex || Adrian || Taylor || Morgan || Jamie || Blake) {
+		cout << "*We have Alex, Adrian, Taylor, Morgan, Jamie, and Blake in the game.*" << endl;
+		cin >> connection;
+
+		if (connection == Adrian || connection == Taylor || connection == Morgan || connection == Jamie || connection == Blake) {
 			cout << "Ooooh " << connection << " is a great choice babes. They've got some good banter haven't they? Why don't you pull them for a chat?" << endl;
-			cout << "Enter yes if you want to pull " << connection << " for a chat and no if you want to think about it more" << endl;
-			cin >> answer >> endl;
-			
+			cout << "< Enter yes if you want to pull " << connection << " for a chat or no if you want to think about it more >" << endl;
+			cin >> answer;
+
 			if (answer == yes) {
 				cout << "Sparks are absolutely flyin!" << endl;
+			}
 			else if (answer == no) {
-				cout << "No harm in that!" endl;
-		
-		else {
-			cout << "Babes, who is that? Are you still crushing on someone from home?" endl;
+				cout << "No harm in that! Lets go grab a drink babes." << endl;
+			}
+		}
+		else if (connection == Alex) {
+			cout << "Alex: Oh babes, I'm shocked to be honest" << endl;
+
+		}
+			else {
+				cout << "Babes, who is that? Are you still crushing on someone from home?" << endl;
+			}
 	}
 
 	void sexyPJS() {
