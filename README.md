@@ -16,6 +16,9 @@ public:
 	string yes = yes;
 	string no = no;
 	int sexy;
+	string connection;
+	string Alex, Adrian, Taylor, Morgan, Jamie, Blake;
+	string answer;
 	
 	
 
