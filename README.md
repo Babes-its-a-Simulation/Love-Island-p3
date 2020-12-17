@@ -6,6 +6,7 @@
   
   public:
   
+  /*Islander names: Alex, Adrian, Taylor, Morgan, Jamie, Blake */
   
 	string name;
 	string maybeSexyPJs;
@@ -48,13 +49,18 @@
 		cin >> maybeSexyPJs;
 
 		if (maybeSexyPJs == yes) {
-			cout << "Aridan: OOH HOO babes I knew you liked to have some fun. Imma go all out for alex." << endl;
+			cout << "Aridan: OOH HOO babes I knew you liked to have some fun. Imma go all out for alex" << endl;
 			int sexy = 1;
 		}
-		else(maybeSexyPJs == no){
+		else if(maybeSexyPJs == no){
 			cout << "Aridan: hmm maybe you're right. I'll keep it a surprise for later." << endl; 
 			int sexy = 2;
 		}
+		else {
+			cout << "Well babes you're just no help huh?" << endl;
+			int sexy = 3;
+		}
+		
   
   }
   
