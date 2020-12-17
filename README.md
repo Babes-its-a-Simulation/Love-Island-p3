@@ -7,6 +7,13 @@
   public:
   
   
+	string name;
+	string maybeSexyPJs;
+	string yes = yes;
+	string no = no;
+	int sexy;
+  
+  
 	void intro() {
 		cout << " " << endl;
 		cout << "Well you're proper fit luv I'll tell ya that." << endl;
@@ -33,6 +40,21 @@
   }
   
   void sexyPJS(){
+	 	cout << "*Aridan walks into the changing room*" << endl;
+		cout << "Adrian wants to know whether or not to put on some sexy PJs for alex tonight" << endl;
+		cout << "Taylor says there's never a time not to wear some sexy PJs" << endl;
+		cout << "Do you think Aridan should wear some sexy PJs ?" << endl;
+		cout << "Please enter yes or no." << endl;
+		cin >> maybeSexyPJs;
+
+		if (maybeSexyPJs == yes) {
+			cout << "Aridan: OOH HOO babes I knew you liked to have some fun. Imma go all out for alex." << endl;
+			int sexy = 1;
+		}
+		else(maybeSexyPJs == no){
+			cout << "Aridan: hmm maybe you're right. I'll keep it a surprise for later." << endl; 
+			int sexy = 2;
+		}
   
   }
   
