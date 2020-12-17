@@ -19,6 +19,9 @@ public:
 	string connection;
 	string Alex, Adrian, Taylor, Morgan, Jamie, Blake;
 	string answer;
+	string chattinPlace;
+	string snog;
+	string dayBed, couchSwing, firepit, beanBags;
 	
 	
 
@@ -61,6 +64,28 @@ public:
 
 			if (answer == yes) {
 				cout << "Sparks are absolutely flyin!" << endl;
+				cout << "Where do you want to go to chat?" << endl;
+				cout << "*The day bed, couch swing, firepit, and the bean bags are open*" << endl;
+				cin >> chattinPlace >> endl;
+				
+				if (chattinPlace ==day bed || chattinPlace == couch swing || chattinPlace == firepit || chattinPlace ==bean bags) {
+					cout << "Great choice! Bring " << connection << " over to the " << chattinPlace << "." << endl;
+					cout << connection << ": I think we have a great connection, we get on so well and babes you already know you're fit as." << endl;
+					cout << "Eeeeeee! Fanny flutters!" << endl;
+					cout << "*They're charming the socks off ya! Do you want to go in for a cheeky snog?*" << endl;
+					cout << "Enter yes if you want to snog " << connection << " and no if you don't think you two are there yet." << endl;
+					cin >> snog >> endl;
+					
+					if (snog == yes) {
+						cout << "What an amazing kisser!" << endl;
+					}
+					
+					if (snog == no) {
+						cout << "It's not the right time babes, and that's ok!" << endl;
+					}
+					
+					cout << connection << ": Let's go rejoin the group! I'm sure they've been wondering where we've been." << endl;
+				}
 			}
 			else if (answer == no) {
 				cout << "No harm in that! Lets go grab a drink babes." << endl;
@@ -71,7 +96,7 @@ public:
 
 		}
 			else {
-				cout << "Babes, who is that? Are you still crushing on someone from home?" << endl;
+				cout << "Babes, who is that? Are you still crushing on someone from back home?" << endl;
 			}
 	}
 
