@@ -23,6 +23,7 @@ public:
 	string snog;
 	string dayBed, couchSwing, firepit, beanBags;
 	int firstKiss;
+	string couple1;
 	
 
 
@@ -37,13 +38,10 @@ public:
 		cout << "Gorgeous name "<< name<<". I bet ya make ya mum proud with it" << endl;
 	}
 
-	void firstCoupling() {
-
-
-
-	}
 
 	void bitaBanter() {
+
+		/* for this function its between the player and couple1 . these are both strings with names*/
 
 	}
 
@@ -125,11 +123,11 @@ public:
 		cin >> maybeSexyPJs;
 
 		if (maybeSexyPJs == "yes") {
-			cout << "Aridan: OOH HOO babes I knew you liked to have some fun. Fashion Fashion Diva baby" << endl;
+			cout << "Adrian: OOH HOO babes I knew you liked to have some fun. Fashion Fashion Diva baby" << endl;
 			int sexy = 1;
 		}
 		else if(maybeSexyPJs == "no"){
-			cout << "Aridan: hmm maybe you're right. I'll keep it a surprise for later." << endl; 
+			cout << "Adrian: hmm maybe you're right. I'll keep it a surprise for later." << endl; 
 			int sexy = 2;
 		}
 		else {
@@ -169,6 +167,8 @@ int main() {
 	int flirt;
 	string names[6] = { "Alex"," Adrian", "Taylor", "Morgan", "Jamie", "Blake" };
 
+
+	/*Game Introduction*/
 	
 
 	cout << "Finding Love can be tough, life is nothing but work, eat, sleep, repeat." << endl;
@@ -190,8 +190,10 @@ int main() {
 	string name;
 	string maType;
 	string job;
-	int firstKiss =0;
+	int firstKiss = 0;
 	string connection;
+	int sexy;
+	string couple1;
 
 	if (lad == gender) {
 		player.intro();
@@ -219,13 +221,18 @@ int main() {
 	}
 
 	
-	/*
+	/*		heres the code to generate a random person
+	* 
 	srand((unsigned)time(0));
 	flirt = (rand() % 6) + 1;
 	cout << "*As they all walk in " << names[flirt] << " casts quite the apprieciative glance at ya*" << endl;
 	cout << " " << endl;
 	*/
 	/*Islander names: Alex, Adrian, Taylor, Morgan, Jamie, Blake */
+
+
+
+	/*Characters Introduction and job selection*/
 
 	cout << "*One by one the rest of the Islanders enter the Vila. It's a filth fest of hotties*" << endl;
 	cout << "*As you all mingle, you discover Taylor works as a Body Builder, Adrian is a french model, and Alex is currently unemployed*" << endl;
@@ -241,10 +248,75 @@ int main() {
 
 	cout << " " << endl;
 
+	/*First Coupling*/
+
+	cout << "'All ISLANDERS PLEASE GATHER AROUND THE FIREPLACE.'" << endl;
+	cout << "It's time to form our first couples." << endl;
+	cout << " " << endl;
+	cout << "* As you look out into the villa, you begin to wonder how the night will play out." << endl;
+	
+
+	
+	if (gender == lad) {
+		cout << "* You're informed you're the first one to step out and jitters travel up your spine*" << endl;
+		cout << "You make your way to the group and stand in front of them, right next to our Love Island Host Laura Whitmore" << endl;
+		cout << "Laura: Alright Islanders, you know the deal, if you fancy this young lad take a step forward" << endl;
+		cout << "Nobody moves, you start sweating your socks off" << endl;
+		cout << " " << endl;
+		cout << " " << endl;
+		/*next lines generate a random person to step forward*/
+		srand((unsigned)time(0));
+		flirt = (rand() % 6) + 1;
+		cout << "Finally, " << names[flirt] << " takes a step forward" << endl;
+		cout << " " << endl;
+		cout << "Laura: " << names[flirt] << " what made you step forward?" << endl;
+		cout << names[flirt] << ": well, you see, there's just something about him that I really like. Maybe it's the shorts." << endl;
+		cout << " " << endl;
+		cout << "Laura: ok " << name << ", even though " << names[flirt] << "stepped forward for you. You can still choose to couple up with any of the girls here." << endl;
+		cout << " Who would you like to couple up with?" << endl;
+		cout << "Currently standing in front of you is Alex, Morgan, Adrian, Taylor, Jamie, and Blake." << names[flirt] << " has taken a fancy towards ya." << endl;
+		cin >> couple1;
+		cout << "Fabulous choice darling, you and " << couple1 << " look adorable together!" << endl;
+		cout << " " << endl;
+		cout << " Islanders, we have our first couple!!" << endl;
+
+	}
+	else {
+
+		cout << "*You're informed you're the first one to step out and jitters travel up your spine*" << endl;
+		cout << "You make your way to the group and stand in front of them, right next to our Love Island Host Laura Whitmore" << endl;
+		cout << "Laura: Alright Islanders, you know the deal, if you fancy this pretty lady take a step forward" << endl;
+		cout << "Nobody moves, you start sweating your socks off" << endl;
+		cout << " " << endl;
+		cout << " " << endl;
+		/*next lines generate a random person to step forward*/
+		srand((unsigned)time(0));
+		flirt = (rand() % 6) + 1;
+		cout << "Finally, " << names[flirt] << " takes a step forward" << endl;
+		cout << " " << endl;
+		cout << "Laura: " << names[flirt] << " what made you step forward?" << endl;
+		cout << names[flirt] << ": well, you see, there's just something about them that I really like. Maybe it's the shorts." << endl;
+		cout << " " << endl;
+		cout << "Laura: ok " << name << ", even though " << names[flirt] << "stepped forward for you. You can still choose to couple up with any of the girls here." << endl;
+		cout << " Who would you like to couple up with?" << endl;
+		cout << "Currently standing in front of you is Alex, Morgan, Adrian, Taylor, Jamie, and Blake." << names[flirt] << " has taken a fancy towards ya." << endl;
+		cin >> couple1;
+		cout << "Fabulous choice darling, you and " << couple1 << " look adorable together!" << endl;
+		cout << " " << endl;
+		cout << " Islanders, we have our first couple!!" << endl;
+
+	}
+
+	cout << "*You and " << couple1 << " Head over towards the pool to wait while the others couple up." << endl;
+	/*Have they got a bit a banter between them?*/
+
+	player.bitaBanter();
+	
+	/*Second Scene*/
+
 
 	cout<<"*You see Alex heading to the day beds and decide to tag along" << endl;
 	cout << "*You guys settle into the day beds and reflect on the night*" << endl;
-
 
 	player.Chat();
 
@@ -271,13 +343,23 @@ int main() {
 	}
 
 	cout << " " << endl;
+	cout << "*End of Day 1*" << endl;
+	cout << " " << endl;
+	cout << " " << endl;
 	cout << "*Everyone is buzzing. Our Love Island Journey has taken it's first steps*" << endl;
 	cout << "^As the excitement of the first day wears off, you head to the bathroom to get ready for bed." << endl;
 
+	
 	if (gender == "lad "&& connection != "Taylor" && connection != "Adrian") {
 		player.sexyPJS();
+
+		if (sexy == 1 || sexy == 2) {
+			cout << "As you and the lads head into the bed chamber, you  realize" << endl;
+
+		}
 		
 	}
+	
 		
 	
 
@@ -290,4 +372,5 @@ int main() {
 	
 
 }
+
 
