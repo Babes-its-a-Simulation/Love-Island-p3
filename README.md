@@ -22,6 +22,7 @@ public:
 	string chattinPlace;
 	string snog;
 	string dayBed, couchSwing, firepit, beanBags;
+	int firstKiss;
 	
 
 
@@ -53,6 +54,7 @@ public:
 	void Chat() {
 		cout << "Alex: It's such a nice night out, I wonder what connections everyone is making." << endl;
 		cout << "So babes, is there anyone that your feeling a connection with?" << endl;
+		cout << " " << endl;
 		cout << "*Your options are Alex, Adrian, Taylor, Morgan, Jamie, or Blake.*" << endl;
 		cin >> connection;
 
@@ -63,13 +65,16 @@ public:
 			cout << "*Uh oh babes, it looks like you made things weird between alex and ya" << endl;
 		}
 
-		else{
+		else {
 
 			cout << "Ooooh " << connection << " is a great choice babes. They've got some good banter haven't they? Why don't you pull them for a chat?" << endl;
 			cout << "< Enter yes if you want to pull " << connection << " for a chat or no if you want to think about it more >" << endl;
 			cin >> answer;
+			
+			cout << answer<<endl;
 
-			if (answer == yes) {
+			
+			if (answer == "yes") {
 				cout << "Sparks are absolutely flyin!" << endl;
 				cout << "Where do you want to go to chat?" << endl;
 				cout << "*The day bed, couch swing, firepit, and the bean bags are open*" << endl;
@@ -81,42 +86,49 @@ public:
 				cout << "Enter yes if you want to snog " << connection << " and no if you don't think you two are there yet." << endl;
 				cin >> snog;
 
-				if (snog == yes) {
+				if (snog == "yes") {
 					cout << "What an amazing kisser!" << endl;
+
+					cout << connection << ": I'm proper blushing right now ya." << endl;
+					firstKiss = 1;
 				}
 
-				else if (snog == no) {
-					cout << "It's not the right time babes, and that's ok!" << endl;
-				}
 				else {
-					cout << "Babe's c'mon which one?" << endl;
+					cout << "It's not the right time babes, and that's ok!" << endl;
+					firstKiss = 2;
 				}
+
 				cout << " " << endl;
 				cout << connection << ": Let's go rejoin the group! I'm sure they've been wondering where we've been." << endl;
 			}
-
-			else if (answer == no) {
-				cout << "No harm in that! Lets go grab a drink babes." << endl;
+			else {
+				cout << "Thats alright Babes" << endl;
+				cout << " " << endl;
+				cout << connection << ": Let's go rejoin the group! I'm sure they've been wondering where we've been." << endl;
+				firstKiss = 3;
 			}
+
 		}
+
+
 		
 		
 		}
 	
 
 	void sexyPJS() {
-		cout << "*Aridan walks into the changing room*" << endl;
-		cout << "Adrian wants to know whether or not to put on some sexy PJs for alex tonight" << endl;
-		cout << "Taylor says there's never a time not to wear some sexy PJs" << endl;
-		cout << "Do you think Aridan should wear some sexy PJs ?" << endl;
+		cout << "*Adrian walks into the changing room*" << endl;
+		cout << "Adrian: Shall I wear some sexy PJs tonight? Maybe give a lil show?" << endl;
+		cout << "Taylor: there's never a time not to wear some sexy PJs" << endl;
+		cout << "Do you think Aridan should wear some sexy PJs?" << endl;
 		cout << "Please enter yes or no" << endl;
 		cin >> maybeSexyPJs;
 
-		if (maybeSexyPJs == yes) {
-			cout << "Aridan: OOH HOO babes I knew you liked to have some fun. Imma go all out for alex" << endl;
+		if (maybeSexyPJs == "yes") {
+			cout << "Aridan: OOH HOO babes I knew you liked to have some fun. Fashion Fashion Diva baby" << endl;
 			int sexy = 1;
 		}
-		else if(maybeSexyPJs == no){
+		else if(maybeSexyPJs == "no"){
 			cout << "Aridan: hmm maybe you're right. I'll keep it a surprise for later." << endl; 
 			int sexy = 2;
 		}
@@ -178,6 +190,8 @@ int main() {
 	string name;
 	string maType;
 	string job;
+	int firstKiss =0;
+	string connection;
 
 	if (lad == gender) {
 		player.intro();
@@ -234,6 +248,41 @@ int main() {
 
 	player.Chat();
 
+	if (firstKiss == 1) {
+		cout << "*As you head back to the rest of the group you can't stop thinking about the kiss. it was proper magical." << endl;
+		cout << "You decide to chance a glance at " << connection << " and catch him staring right back at you" << endl;
+		cout << "INSTANT BLUSH" << endl;
+		
+		
+
+	}
+	else if (firstKiss == 2) {
+		cout << "You walk back towards the rest of the islanders wondering if " << connection << " is feeling the same butterflies you are." << endl;
+		cout << "You can't help how giddy you feel about where things will go" << endl;
+		cout << "As you're smiling to yourself, you chance a peek at " << connection << " and realize they're staring at Alex" << endl;
+		cout << "*This bothers you slightly but you don't say anything yet. It's still just early days." << endl;
+		
+	}
+	else if (firstKiss == 3) {
+		cout << "You and Alex finish up resting and decide to make your way back to everyone else." << endl;
+	}
+	else {
+
+	}
+
+	cout << " " << endl;
+	cout << "*Everyone is buzzing. Our Love Island Journey has taken it's first steps*" << endl;
+	cout << "^As the excitement of the first day wears off, you head to the bathroom to get ready for bed." << endl;
+
+	if (gender == "lad "&& connection != "Taylor" && connection != "Adrian") {
+		player.sexyPJS();
+		
+	}
+		
+	
+
+
+	
 
 
 	
