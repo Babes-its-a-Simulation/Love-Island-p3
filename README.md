@@ -26,6 +26,7 @@ public:
 	string couple1;
 	string banter;
 	string banternight;
+	string geography;
 
 
 	/*Islander names: Alex, Adrian, Taylor, Morgan, Jamie, Blake */
@@ -200,6 +201,51 @@ public:
 	}
 
 	void dumbMoment() {
+
+		cout << "Good morning islander!" << endl;
+		cout << " " << endl;
+		cout << "<It looks some of the islanders are in a heated discussion over by the bean bags, why don't you go join them?>" << endl;
+		cout << "<It seems that Alex is confused about some things! Can you help them?>" << endl;
+		cout << "Can you help Alex? Yes or no?" << endl;
+		cin >> geography;
+
+		if (geography == yes) {
+			cout << "Let's see what they're saying!" << endl;
+		}
+
+		else {
+			cout << "Well let's listen to what they're saying anyways." << endl;
+		}
+
+		cout << "Alex: So Essex is a continent right?" << endl;
+		cout << "Hmmmm I'm not sure if that sounds right." << endl;
+		cout << "<What do you think islander? Is Essex a continent or is it county?" << endl;
+		cin >> geography;
+
+		if (geography == "continent") {
+			cout << "Last time I checked, it was a county! You need to brush up on your geography islander." << endl;
+		}
+
+		else if (geography == "county") {
+			cout << "Nice job islander! Maybe you lot are smarter than the public gives ya credit for!" << endl;
+		}
+
+		cout << "Alex: So if I go in a plane for holiday, that's still the United Kingdom isn't it?" << endl;
+		cout << "Morgan: Well it depends on where you want to go." << endl;
+		cout << "Alex: So Spain?" << endl;
+		cout << "<Islander, is Spain in the United Kingdom?>" << endl;
+		cin >> geography;
+
+		if (geography == yes) {
+			cout << "Oh no darlin'. That's just not right is it." << endl;
+		}
+		else if (geography == no) {
+			cout << "Thank god that at least one of you lot has common sense." << endl;
+		}
+
+		cout << "These are some pretty silly questions from Alex, maybe it was a good thing that you two didn't work together." << endl;
+		
+
 
 	}
 
