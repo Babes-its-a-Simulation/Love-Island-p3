@@ -24,7 +24,8 @@ public:
 	string dayBed, couchSwing, firepit, beanBags;
 	int firstKiss;
 	string couple1;
-	
+	string banter;
+	string banternight;
 
 
 	/*Islander names: Alex, Adrian, Taylor, Morgan, Jamie, Blake */
@@ -42,6 +43,66 @@ public:
 	void bitaBanter() {
 
 		/* for this function its between the player and couple1 . these are both strings with names*/
+		// couple1 = your love choice
+		// name = your name that you put in
+
+		cout << " " << endl;
+		cout << "* It's time for some banter with you chosen mate <3. " << endl;
+
+		if (couple1 == Alex) {
+			cout << " " << endl;
+			cout << "*Alex comes to sit next to ya* " << endl;
+			cout << "Alex: Hey" << name << endl;
+			cout << "* You and Alex begin having a chat. The banter is fairly dry.*"
+			cout << " " << endl;
+			cout << "Alex: Right, I don't know about this chat. " << endl;
+			cout << "I don't think we're clicking very well eh?" << endl;
+			cout << "I think I'd rather go for chat with another Islander right abouts now. " << endl;
+			cout << " " << endl;
+			cout << "*Alex leaves and you're feeling a bit dodgy about them.* " << endl;
+	
+		}
+
+		else {
+			cout << " " << endl;
+			cout << couple1 << " comes to sit next to ya at the pool." << endl;
+			cout << couple1 <<": Hey " << name << endl;
+			cout << "*" << couple1 << " and ya begin having a chat. The banter is starting off fairly nice. " << endl;
+			cout << " " << endl;
+			cout << couple1 << ": I'm quite happy with our chat. " << endl;
+			cout << " It's quite nice talking to ya, innit? " << endl;
+			cout << " Would you like to talk by the fire? *yes or no?*" << endl;
+			cin >> banter;
+
+			if (banter == yes) {
+				cout << " " << endl;
+				cout << couple1 << ": I'm glad we moved over here, away from everyone. " << endl;
+				cout << " It's mighty fine to have a chat with someone as fit as yaself. " << endl;
+				cout << "* You and " << couple1 << "have a fine chat by the fire.*" << endl;
+				cout << "* The chat continues for what feels like hours.*" << endl;
+				
+				}
+			
+			else {
+				cout << " " << endl;
+				cout << "*" << couple1 << " and ya stay talking by the pool.* " << endl;
+				cout << "*The chat turns out very nice. You and " << couple1 << " have a nice bit of banter between you." << endl;
+
+
+			}
+			
+			cout << "* You and " << couple1 << " learn more details about each others lives before the island." << endl;
+			cout << "*Both of ya leave feeling very chuffed, and happy with the coupling." << endl;
+
+
+
+		}
+		cout << " " << endl;
+		cout << "* It's the end of a long day on Love Island. *" << endl;
+		cout << "* Islander, are you ready for bed? Reply yes* " << endl;
+		cin >> banternight
+		cout << "* You and the other Islanders fall asleep, awaiting the new day" << endl;
+
 
 	}
 
