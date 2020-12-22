@@ -211,19 +211,18 @@ public:
 	}
 
 	void Chat() {
-		cout << "Alex: It's such a nice night out, I wonder what connections everyone is making." << endl;
+			cout << "Blake: It's such a nice night out, I wonder what connections everyone is making." << endl;
 		cout << "So babes, is there anyone that your feeling a connection with?" << endl;
 		cout << " " << endl;
 		cout << "*Your options are Alex, Adrian, Taylor, Morgan, Jamie, or Blake.*" << endl;
 		cin >> connection;
 
 		if (connection == Alex) {
-			cout << "Oh um well you see babes I don't think I'm feeling quite the same things you are at the moment" << endl;
+			cout << "Oh um well I don't know why you'd pick me after our morning" << endl;
 			cout << "*Alex awkwardly leaves" << endl;
 			cout << " " << endl;
-			cout << "*Uh oh babes, it looks like you made things weird between alex and ya" << endl;
+			cout << "*Uh oh babes, it looks like you made things even more weird between alex and ya" << endl;
 		}
-
 		else {
 
 			cout << "Ooooh " << connection << " is a great choice babes. They've got some good banter haven't they? Why don't you pull them for a chat?" << endl;
