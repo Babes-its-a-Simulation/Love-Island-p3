@@ -379,7 +379,7 @@ int main() {
 	Islander player;
 	string gender;
 	int flirt;
-	string names[6] = { "Alex"," Adrian", "Taylor", "Morgan", "Jamie", "Blake" };
+	string names[7] = { "Alex"," Adrian", "Taylor", "Morgan", "Jamie", "Blake", "Danny" };
 
 
 	/*Game Introduction*/
@@ -408,6 +408,7 @@ int main() {
 	string connection;
 	int sexy;
 	string couple1;
+	string lieyesorno;
 
 	if (lad == gender) {
 		player.intro();
@@ -458,7 +459,7 @@ int main() {
 
 	cout << "Morgan: Really?! that sounds like a lot of fun luv" << endl;
 	cout << "I heard that Jamie is an Instagram model and Blake works as an assistant to the assitant of Adele's manager." << endl;
-	cout << "Anyways Babe, I'll tell ya right now that blake has a smokin' body. I think I'll go see if I can find their type. Wish me luck babes" << endl;
+	cout << "Anyways Babe, I'll tell ya right now that blake has a smokin' body. Blake's over there talkin' to Danny, I think I'll go see if I can find their type. Wish me luck babes" << endl;
 
 	cout << " " << endl;
 
@@ -488,7 +489,7 @@ int main() {
 		cout << " " << endl;
 		cout << "Laura: ok " << name << ", even though " << names[flirt] << "stepped forward for you. You can still choose to couple up with any of the girls here." << endl;
 		cout << " Who would you like to couple up with?" << endl;
-		cout << "Currently standing in front of you is Alex, Morgan, Adrian, Taylor, Jamie, and Blake." << names[flirt] << " has taken a fancy towards ya." << endl;
+		cout << "Currently standing in front of you is Alex, Morgan, Adrian, Taylor, Jamie, Danny, and Blake." << names[flirt] << " has taken a fancy towards ya." << endl;
 		cin >> couple1;
 		cout << "Fabulous choice darling, you and " << couple1 << " look adorable together!" << endl;
 		cout << " " << endl;
@@ -505,7 +506,7 @@ int main() {
 		cout << " " << endl;
 		/*next lines generate a random person to step forward*/
 		srand((unsigned)time(0));
-		flirt = (rand() % 6) + 1;
+		flirt = (rand() % 7) + 1;
 		cout << "Finally, " << names[flirt] << " takes a step forward" << endl;
 		cout << " " << endl;
 		cout << "Laura: " << names[flirt] << " what made you step forward?" << endl;
@@ -513,7 +514,7 @@ int main() {
 		cout << " " << endl;
 		cout << "Laura: ok " << name << ", even though " << names[flirt] << "stepped forward for you. You can still choose to couple up with any of the girls here." << endl;
 		cout << " Who would you like to couple up with?" << endl;
-		cout << "Currently standing in front of you is Alex, Morgan, Adrian, Taylor, Jamie, and Blake." << names[flirt] << " has taken a fancy towards ya." << endl;
+		cout << "Currently standing in front of you is Alex, Morgan, Adrian, Taylor, Jamie, Danny, and Blake." << names[flirt] << " has taken a fancy towards ya." << endl;
 		cin >> couple1;
 		cout << "Fabulous choice darling, you and " << couple1 << " look adorable together!" << endl;
 		cout << " " << endl;
@@ -534,26 +535,33 @@ int main() {
 
 	player.Chat();
 
-	if (firstKiss == 1) {
+	if (firstKiss == 1) {  /*Kissed*/
 		cout << "*As you head back to the rest of the group you can't stop thinking about the kiss. it was proper magical." << endl;
 		cout << "You decide to chance a glance at " << connection << " and catch him staring right back at you" << endl;
 		cout << "INSTANT BLUSH" << endl;
+		if (connection != couple1) {
+			cout << "Even though " << connection << " isn't who you're paired up with, you find yourself beginning to look forward to talking them more instead of " << couple1 << endl;
+			cout << " You hope that " << couple1 << " will understand where you're coming. They just haven't got the same banter as " << connection << endl;
+		}
+		else {
+			cout << "You're glad you coupled up with " << couple1 << " they're just so adorable and you can't wait to spend more time with them" << endl;
+		}
 		
-		
-
 	}
-	else if (firstKiss == 2) {
+	else if (firstKiss == 2) { /*Didnt kiss*/
 		cout << "You walk back towards the rest of the islanders wondering if " << connection << " is feeling the same butterflies you are." << endl;
 		cout << "You can't help how giddy you feel about where things will go" << endl;
 		cout << "As you're smiling to yourself, you chance a peek at " << connection << " and realize they're staring at Alex" << endl;
+
+		if(connection != couple1)
 		cout << "*This bothers you slightly but you don't say anything yet. It's still just early days." << endl;
 		
 	}
-	else if (firstKiss == 3) {
+	else if (firstKiss == 3) {	/*didn't even pull them for a chat*/
 		cout << "You and Alex finish up resting and decide to make your way back to everyone else." << endl;
 	}
 	else {
-
+		cout << "Blimey quite an icky sitch babes" << endl;
 	}
 
 	cout << " " << endl;
@@ -564,18 +572,78 @@ int main() {
 	cout << "^As the excitement of the first day wears off, you head to the bathroom to get ready for bed." << endl;
 
 	
-	if (gender == "lad "&& connection != "Taylor" && connection != "Adrian") {
+	if (gender == "lad "&& connection != "Taylor" && connection != "Adrian" && couple1 != "Taylor" && couple1 != "Adrian") {
 		player.sexyPJS();
 
-		if (sexy == 1 || sexy == 2) {
-			cout << "As you and the lads head into the bed chamber, you  realize" << endl;
+		if (sexy == 1 && connection == couple1) {
+			cout << "As you and the lads head into the bed chamber, you realize you would quite fancy it if "<<couple1<<" decided to wear something special to bed" << endl;
 
 		}
+		else if(sexy == 1 && connection != couple1){
+			cout << "As you and the lads head into the bed chamber, you realize you would quite fancy it if " << connection << " decided to wear something special to bed" << endl;
+
+		}
+		cout << " " << endl;
+		cout << "As you follow the group into the bedchamber, you see all the beds lined up next to each in the same room!" << endl;
 		
 	}
+	else if (gender == "bird " && connection != "Taylor" && connection != "Adrian" && couple1 != "Taylor" && couple1 != "Adrian") {
+
+		player.sexyPJS();
+
+		if (sexy == 1 && connection == couple1) {
+			cout << "As you and the girls head into the bed chamber, you realize you would quite fancy it if " << couple1 << " decided to wear something special to bed" << endl;
+
+		}
+		else if (sexy == 1 && connection != couple1) {
+			cout << "As you and the lads head into the bed chamber, you realize you would quite fancy it if " << connection << " decided to wear something special to bed" << endl;
+
+		}
+		cout << " " << endl;
+		cout << "As you follow the group into the bed chamber, you see all the beds lined up next to each in the same room!" << endl;
+
+	}
+
+	else {
+		cout << " " << endl;
+	}
+
+	cout << " " << endl;
+	cout << " *All the Islanders have arrived in the room*" << endl;
+	cout << " Blake: 1,2,3,4 ... there aren't enough bed for all of us!" << endl;
+	cout << " Morgan: No look, there are exactly eight of us. That means the couples all share a bed together. " << endl;
+	cout << " " << endl;
+	cout << " *Everyone looks round at each other, some look nervous while others couldn't look happier*" << endl;
+	cout << "You look over at " << couple1 << endl;
+	if (connection == couple1) {
+		cout << " It almost seems like they've got a faint blush from their ears to their neck." << endl;
+		cout << "You chuckle. This certainly speeds things up a bit" << endl;
+		cout << " " << endl;
+		cout << couple1 << " walks over to ya." << endl;
+		cout << couple1 << ": and what are you over here giggling about ya?" << endl;
+		cout << " " << endl;
+		cout << "* Uh Oh, should you tell them the truth?" << endl;
+		cout << "*yes or no?" << endl;
+		cin >> lieyesorno;
+
+		if (lieyesorno == "yes") {
+
+			cout << " " << endl;
+			cout << "* You pull them closer to you*" << endl;
+			cout << "I was just thinking how cute you looked over there" << endl;
+
+
+			}
+		else {
+			cout << " " << endl;
+			cout << " Well, I was just thinking about that one dog with butter on his head. Butter dog the dog with the butter" << endl;
+			cout << couple1 << ": oh ya haha I love that meme" << endl;
+
+		}
+	}
+
 	
-		
-	
+
 
 
 	
