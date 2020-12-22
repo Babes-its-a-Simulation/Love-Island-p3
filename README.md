@@ -27,7 +27,7 @@ public:
 	string banter;
 	string banternight;
 	string geography;
-
+	int Smartness;
 
 	/*Islander names: Alex, Adrian, Taylor, Morgan, Jamie, Blake */
 
@@ -107,7 +107,7 @@ public:
 
 	}
 
-		void muggedOff() {
+	void muggedOff() {
 		cout << " " << endl;
 		cout << " " << endl;
 		cout << "* It's a new day on Love Island after last night's banter. *" << endl;
@@ -248,12 +248,12 @@ public:
 					cout << "What an amazing kisser!" << endl;
 
 					cout << connection << ": I'm proper blushing right now ya." << endl;
-					firstKiss = 1;
+					int firstKiss = 1;
 				}
 
 				else {
 					cout << "It's not the right time babes, and that's ok!" << endl;
-					firstKiss = 2;
+					int firstKiss = 2;
 				}
 
 				cout << " " << endl;
@@ -263,7 +263,7 @@ public:
 				cout << "Thats alright Babes" << endl;
 				cout << " " << endl;
 				cout << connection << ": Let's go rejoin the group! I'm sure they've been wondering where we've been." << endl;
-				firstKiss = 3;
+				int firstKiss = 3;
 			}
 
 		}
@@ -302,36 +302,39 @@ public:
 
 		cout << "Good morning islander!" << endl; 
 		cout << " " << endl; 
-		cout << "It looks some of the islanders are in a heated discussion over by the bean bags, why don't you go join them?" << endl; 
-		cout << "<It seems that Alex is confused about some things! Can you help them?>" << endl; 
+		cout << "Morgan: It looks some of the islanders are in a heated discussion over there by the bean bags, shall we join them?" << endl; 
+		cout << "Morgan: It seems that Alex is confused about some things! Can you help them?" << endl; 
 		cout << " " << endl; 
 		cout << "<Can you help Alex? Yes or no?>" << endl; 
 		cin >> geography;
 
 		if (geography == "yes") {
 			cout << " " << endl; 
-			cout << "Let's see what they're saying!" << endl;
+			cout << "Morgan: Let's see what they're saying!" << endl;
 		}
 
 		else {
 			cout << " " << endl;
-			cout << "Well let's listen to what they're saying anyways." << endl;
+			cout << "Morgan: Why don't we take a listen anyways." << endl;
 		}
 
 		cout << " " << endl; 
 		cout << "Alex: So Essex is a continent right?" << endl;
-		cout << "Hmmmm I'm not sure if that sounds right." << endl;
+		cout << "Morgan: Hmmmm I'm not sure if that sounds right." << endl;
 		cout << " " << endl; 
+		cout << "Morgan: What do you think?" << endl;
 		cout << "<What do you think islander? Is Essex a continent or is it county?" << endl;
 		cin >> geography;
 		cout << " " << endl; 
 
 		if (geography == "continent") {
 			cout << "Last time I checked, it was a county! You need to brush up on your geography islander." << endl;
+			int Smartness = 1;
 		}
 
 		else if (geography == "county") {
 			cout << "Nice job islander! Maybe you lot are smarter than the public gives ya credit for!" << endl;
+			int Smartness = 2;
 		}
 
 		cout << " " << endl; 
@@ -344,13 +347,15 @@ public:
 
 		if (geography == "yes") {
 			cout << "Oh no darlin'. That's just not right is it." << endl;
+			int Smartness = 3;
 		}
 		else if (geography == "no") {
 			cout << "Thank god that at least one of you lot has common sense." << endl;
+			int Smartness = 4;
 		}
 
 		cout << " " << endl; 
-		cout << "These are some pretty silly questions from Alex, maybe it was a good thing that you two didn't work together." << endl;
+		cout << "Morgan: *whispers* These are some pretty silly questions from Alex, maybe it was a good thing that you two didn't work out." << endl;
 
 
 
