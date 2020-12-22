@@ -107,7 +107,106 @@ public:
 
 	}
 
-	void muggedOff() {
+		void muggedOff() {
+		cout << " " << endl;
+		cout << " " << endl;
+		cout << "* It's a new day on Love Island after last night's banter. *" << endl;
+		cout << "* Its a hot, sunny day at the villa, and tempers could start flaring* " << endl;
+		cout << " " << endl;
+		cout << "* Press any key to continue * " << endl;
+		cin >> mugged;
+		cout << " " << endl;
+
+		if (couple1 == Alex) {
+			cout << "*You and Alex had quite a bad chat last night* " << endl;
+			cout << "* You figure you might go have another chat with them* " << endl;
+			cout << "* Entering their room, you notice Alex is already awake" << endl;
+			cout << "Alex: Right its about time I figure we have a chat." << endl;
+			cout << "Where do you want to have this chat? In me room or by the pool?" << endl;
+			cout << " " << endl;
+			cout << "*Reply with room or pool* " << endl;
+			cin >> muggedOne;
+			if (muggedOne == room) {
+				cout << " " << endl;
+				cout << "Alex: Right I guess we will stay in here then. " << endl;
+				cout << "I wish we coulda gone out by the pool. It looks lovely out there. " << endl;
+				cout << "We can't even agree on the weather. Its like we hardly see eye to eye on anything. " << endl;
+				cout << " Do you think we got a connection between us?" << endl;
+				cin >> muggedThree 
+					if (muggedThree == yes) {
+						cout << " " << endl;
+						cout << "Alex: Well I just don't think we do. " << endl;
+					}
+
+					else {
+						cout << " " << endl;
+						cout << "Right, well at least we agree on something. " << endl;
+					}
+				cout << " I think its best just for you to bugger off now. " << endl;
+
+				}
+			
+			else {
+				cout << " " << endl;
+				cout << "*You and Alex make your way to the pool* " << endl;
+				cout << "Alex: Its bloody hot out here. I wish we coulda stayed inside. " << endl;
+				cout << "We can't even agree on the weather. Its like we hardly see eye to eye on anything. " << endl;
+				cout << " Do you think we got a connection between us?" << endl;
+				cin >> muggedThree;
+					if (muggedThree == yes) {
+						cout << " " << endl;
+						cout << "Alex: Well I just don't think we do. " << endl;
+					}
+
+					else {
+						cout << " " << endl;
+						cout << "Right, well at least we agree on something. " << endl;
+					}
+				cout << " I think its best just for you to bugger off now. " << endl;
+				cout << " " << endl;
+
+			}
+
+		}
+
+		else {
+			cout << "*You go and find " << couple1 << " to pull them for a chat.*" << endl;
+			cout << couple1 << ": Good morning " << name << "." << endl;
+			cout << " " << endl;
+			cout << "*Reply with your next statment to " << couple1 << ". A simple good morning works the best!" << endl;
+			cin >> muggedTwo
+			cout << " " << endl;
+			cout << couple1 <<  ": Mighty fine morning we got here today. " << endl;
+			cout << "Theres soemthing bothering me about Alex. " << endl;
+			cout << "Do you feel the same? " << endl;
+			cin >> muggedFour;
+				if (muggedFour == yes) {
+					cout << " " << endl;
+					cout << couple1 << ": Right, I'm glad someone else noticed it too. " << endl;
+				}
+				
+				else {
+					cout << " " << endl;
+					cout << couple1 << ": Oh thats a bit strange. They've been quite brash to me. " << endl;
+					cout << "Let me tell ya why they're a twat. " << endl;
+				}
+			cout << "Alex has got me quite mugged off. " << endl;
+			cout << "They're rude to the other Islanders, and they've not been my fancy. " << endl;
+			cout << "I'll tell you what, I'd want them off the Island eventually. " << endl;
+			cout << "I'm glad I could get some of this off me chest with ya. " << endl;
+			cout << " " << endl;
+
+		}
+
+		cout << "------------------------------------------- " << endl;
+		cout << " " << endl;
+		cout << "* It's been quite a day so far at the villa. *" << endl;
+		cout << "* Keep playing to find love, and see where Love Island takes you. " << endl;
+		cout << " " << endl;
+		cout << "* Press any key to continue *" << endl;
+		cout << " " << endl;
+		cin >> muggedFive;
+		cout << " " << endl;
 
 	}
 
